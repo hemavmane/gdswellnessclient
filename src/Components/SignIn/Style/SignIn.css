@@ -1,0 +1,174 @@
+/* .login-text {
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 500;
+    line-height: 240%;
+}
+.LoginHeading{
+    color: #500530;
+    font-family: "Poppins", system-ui;
+    font-weight: 600;
+    margin-top: 6px;
+}
+.login{
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 216px;
+    height: 44px;
+    cursor: pointer;
+    background: linear-gradient(101.07deg, #500530 -4.19%, #500630 71.76%);
+    border-radius: 8px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+}
+.google-login,
+.email-register {
+    color: #fff;
+    padding: 2% 4%;
+    border-radius: 8px;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.google-login {
+    background-color: #500630;
+}
+
+.email-register {
+    color: #1f2937;
+
+}
+
+.google-login:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.email-register,
+.email-register:hover {
+    background: #FFF;
+    border: solid 2px black;
+    text-decoration: none;
+    color: inherit;
+}
+
+.email-verify {
+    height: 40vh;
+}
+
+.login-container {
+  
+    border-radius: 16px;
+    height: 100vh;
+} */
+
+
+
+
+
+.sign_login_container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign_login_form_container {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+        0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+}
+
+.sign_left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.sign_form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign_form_container h1 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.input_right {
+    outline: none;
+    border: none;
+    width: 370px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #edf5f3;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.error_msg {
+    width: 370px;
+    padding: 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    background-color: #f34646;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sign_right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #500530;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sign_right h1 {
+    margin-top: 0;
+    color: white;
+    font-size: 40px;
+    align-self: center;
+}
+
+.white_btn,
+.green_btn {
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    background-color: white;
+    border-radius: 20px;
+    width: 180px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.green_btn {
+    background-color: #500530;
+    color: white;
+    margin: 10px;
+}

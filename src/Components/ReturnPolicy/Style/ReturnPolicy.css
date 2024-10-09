@@ -1,0 +1,77 @@
+.ReturnPolicy{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* padding:0 5rem ; */
+    min-height: 68vh;
+    padding-bottom: 4rem;
+}
+ul{
+    list-style: none;
+}
+.ReturnPolicy>h1{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 550;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1.2px;
+    margin-bottom: 1.5rem;
+}
+.ReturnPolicy>h1>span:nth-child(1){
+    color: #857D79;
+}
+.ReturnPolicy>h1>span:nth-child(1):hover{
+    color: rgb(101, 131, 49);
+    cursor: pointer;
+}
+.ReturnPolicy>h1>span:nth-child(2){
+    color: #320473;
+}
+.ReturnPolicyContentsWrapper{
+    padding:0 5rem 
+}
+.ReturnPolicyContentsWrapper>p,.ReturnPolicyPoint{
+    font-size: 13px;
+    font-size: 14.5px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    color: #111111;
+    font-family: Inter, sans-serif;
+    text-align: justify;
+}
+.ReturnPolicyPoints{
+    text-align: justify;
+    margin-top: 0.5rem;
+}
+.ReturnPolicyPoints>li{
+    margin-top: 0.4rem;
+}
+.ReturnPolicyPointsPointRight{
+    margin-right: 0.4rem;
+    color: #ff006e;
+}
+
+@media only screen and (max-width:900px) {
+    .ReturnPolicy{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1.6rem ;
+    }
+    .ReturnPolicyPoints{
+        /* padding-left: 1.3rem; */
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .ReturnPolicyContentsWrapper>p,.ReturnPolicyPoint{
+        font-size: 11.8px;
+    }
+    .ReturnPolicy{
+        padding:0 1rem ;
+        padding-bottom: 3rem;
+    }
+    .ReturnPolicyContentsWrapper{
+        padding:0 1rem 
+    }
+}

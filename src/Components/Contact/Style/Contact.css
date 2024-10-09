@@ -1,0 +1,90 @@
+.enquirenow {
+  background-color: #f8f8f8;
+  font-size: 20px;
+  font-weight: 600;
+}
+.ContactUsHeading{
+  font-family: "Poppins", system-ui;
+  font-weight: 600;
+  color: #000000;
+}
+.enquire-now {
+  padding: calc(21px + 39 * (100vw - 320px) / 1600);
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+
+.contact-input {
+  background-color: #ffffff;
+  outline: none !important;
+  border: none !important;
+}
+
+.ContactError {
+  color: red;
+  margin-left: 2px;
+}
+
+@media only screen and (max-width: 500px) {
+  .enquire-now {
+    padding: 1rem;
+  }
+}
+
+.contactus {
+  width: 50%;
+}
+
+.contact-icon {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: -21px;
+  background-color: #055c36;
+  padding: 13px;
+  border-radius: 7px;
+  display: inherit;
+  color: #ffffff;
+}
+
+.contact-title {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  border-bottom: 3px solid #055c36;
+}
+
+.contact-detail-title {
+  display: block;
+  unicode-bidi: isolate;
+  width: 100%;
+}
+
+.contact-detail-title a {
+  color: #055c36;
+  transition: 0.5s ease;
+  text-decoration: none;
+}
+
+.contact-detail-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(2px + 3 * (100vw - 320px) / 1600);
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: calc(15px + 12 * (100vw - 320px) / 1600)
+    calc(15px + 12 * (100vw - 320px) / 1600)
+    calc(15px + 12 * (100vw - 320px) / 1600)
+    calc(30px + 11 * (100vw - 320px) / 1600);
+  position: relative;
+  border-radius: 10px;
+  margin-left: 22px;
+  /* width: 100%; */
+}
+
+.contat-contaier {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 100%;
+}

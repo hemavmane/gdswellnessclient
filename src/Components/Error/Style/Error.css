@@ -1,0 +1,71 @@
+.Error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88vh;
+}
+.ErrorWrapper{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+}
+.ErrorWrapper>img{
+    width: 18rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.ErrorWrapper>h1{
+    text-align: center;
+    font-size: 22px;
+    color: rgb(70, 36, 36);
+}
+.ErrorWrapper>p{
+    max-width: 50rem;
+    text-align: center;
+    font-weight: 550;
+    font-size: 20px;
+    color: #131516;
+    padding: 0 1.5rem;
+    margin-top: 1rem;
+}
+.ErrorWrapper>button{
+    margin-top: 1.5rem;
+    border: none;
+    outline:none;
+   
+    /* background-color: #0072c6;
+    background-color: #0072c6; */
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    font-weight: 550;
+    font-size: 14.4px;
+    color: white;
+    color: black;
+    color:#ff006e;
+    cursor:pointer;
+}
+.ErrorWrapper>button:hover{
+    background-color: rgb(52, 168, 83);
+    background-color: white;
+    color: #0072c6;
+}
+
+@media only screen and (max-width: 804px){
+    .ErrorWrapper>img{
+        width: 15rem;
+    }
+    .ErrorWrapper>h1{
+        font-size: 19px;
+    }
+    .ErrorWrapper>p{
+        font-weight: 500;
+        font-size: 17px;
+    }
+    .ErrorWrapper>button{
+        margin-top: 1.5rem;
+        padding: 0.6rem 0.9rem;
+        font-weight: 550;
+        font-size: 13px;
+    }
+}

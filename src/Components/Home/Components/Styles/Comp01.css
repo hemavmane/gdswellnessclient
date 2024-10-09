@@ -1,0 +1,39 @@
+/* .Comp01Carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   margin-bottom: 5rem;
+}
+.slideHidden{
+    display: none;
+}
+.slide{
+    width: 100%;
+    height: auto;
+} */
+
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  /* .carousel>img{
+    max-height: 36rem;
+    width: 100vw;
+  } */
+  .slid{
+    width: 100%;
+   height: auto;
+  }
+  .slid-hidden{
+    display: none;
+  }
+  .carousel>button:nth-child(1){
+    position: absolute;
+  }
+  .carousel>button:nth-child(2){
+    position: absolute;
+    
+  }

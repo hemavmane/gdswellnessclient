@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f3f3f3;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h1 {
+    color: #2874f0;
+    font-size: 24px;
+  }
+  
+  .header p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2874f0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #245cc4;
+  }
+  
+  .delivery-info, .rewards, .items, .actions {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  }
+  
+  .delivery-info h2, .rewards h2, .items h2, .actions h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-change {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2874f0;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .item img {
+    margin-right: 20px;
+    border-radius: 8px;
+  }
+  
+  .item-info {
+    font-size: 14px;
+  }
+  
+  .offer {
+    color: green;
+  }
+  
+  .actions .btn {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  

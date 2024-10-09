@@ -1,0 +1,86 @@
+
+ul {
+    list-style: none;
+}
+
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 3rem 3rem 3rem;
+    background-color: #000000b7;
+    /* background-color:#857D79 ;  */
+}
+
+.FooterCol {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+}
+
+.FooterColHeading {
+    color: #36AA55;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    /* background-color: aliceblue; */
+    width: 100%;
+    padding-left: 32px;
+}
+/* .FooterColInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+ .FooterColInfoEmail{
+    width: 250px;
+ }
+.FooterColInfo>li {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    cursor: pointer;
+    font-style: normal;
+    margin-bottom: 6px;
+    color: white;
+}
+
+.FooterColInfo>li:hover {
+    color: #36AA55;
+}
+
+.FooterColHeading01 {
+    /* padding-right: 30px; */
+}
+
+.FooterColHeading02 {
+    /* padding-left: 30px; */
+}
+
+.FooterColHeading03 {
+    /* padding-right: 60px; */
+}
+
+.Footer {
+    position: sticky;
+    top: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width:768px) {
+    .FooterColHeading {
+        font-size: 13px;
+    }
+
+    .FooterColInfo>li {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .Footer {
+        flex-wrap: wrap;
+        padding: 1.5rem;
+        padding: 3rem 3rem 3rem 1rem;
+    }
+}

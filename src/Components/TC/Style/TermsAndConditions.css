@@ -1,0 +1,80 @@
+.TermsAndConditions{
+    display: flex;
+    flex-direction: column;
+    padding: 0 7rem;
+    padding-bottom: 3rem;
+    gap: 1rem;
+}
+.TermsAndConditions>h1{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 550;
+    letter-spacing: 1.2px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 1rem;
+}
+
+
+.TermsAndConditions>h1>span:nth-child(1){
+    color: #857D79;
+}
+.TermsAndConditions>h1>span:nth-child(1):hover{
+    color: rgb(101, 131, 49);
+    cursor: pointer;
+}
+.TermsAndConditions>h1>span:nth-child(2){
+    color: #320473;
+}
+
+.TCComponent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.TCComponentDescriptionsTitleAndDescWrapper{
+    display: flex;
+    flex-direction: column;
+}
+.TCComponentDescriptionsTitleAndDescWrapper>h4{
+    color: #320473;
+    font-size: 16px;
+    font-weight: 650;
+    letter-spacing: 1.5px;
+    font-family: "Inter", sans-serif;
+}
+.TCComponent >p ,.TCComponentDescriptionsTitleAndDescWrapper>p{
+    font-size: 13px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: #111111;
+    font-family: "Inter", sans-serif;
+    text-align: justify;
+}
+.TCComponent>h2{
+    font-size:20px;
+    color: #111111;
+    font-weight: 550;
+    letter-spacing: 1.4px;
+    margin-top: 1.4rem;
+    font-family: "Inter", sans-serif;
+    width: 100%;
+    text-align: left
+}
+
+@media only screen and (max-width:1000px) {
+    .TermsAndConditions{
+        padding: 0 1rem;
+        padding-bottom: 3rem;
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .TCComponentDescriptionsTitleAndDescWrapper>h4 {
+        color: #320473;
+        font-size: 12.3px;
+        font-weight: 500;
+        font-family: "Inter", sans-serif;
+        text-align: justify;
+    }
+}

@@ -1,0 +1,49 @@
+.FeaturedProducts{
+    height: 35rem ;
+    width: auto;
+}
+
+.FeaturedProducts_inner_Container{
+    width: 18rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.image_container>img{
+    width: 330px;
+    height: 330px;
+}
+
+.FeaturedProducts>h1 {
+    font-size: 50px;
+    font-family: "Poppins", system-ui;
+    font-weight: 600;
+    font-style: normal;
+    color: #36AA55;
+}
+
+.image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+@media only screen and (max-width:1025px) {
+    .sale {
+        background-color: white;
+        border-radius: 5px;
+        float: inline-end;
+        border: 1px solid gray;
+        font-size: 1.25rem;
+        font-weight: 400;
+        width: 60px;
+        margin-bottom: 15px;
+    }
+    .row {
+        --bs-gutter-x: 0rem;
+        --bs-gutter-y: 0;
+    }
+}
