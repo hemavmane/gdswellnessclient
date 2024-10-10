@@ -11,8 +11,6 @@ import { MdOutlineEmail } from "react-icons/md";
 import { PiWhatsappLogoBold } from "react-icons/pi";
 
 import { MdEmail } from "react-icons/md";
-// import Header from "../Header/Header";
-// import Footer from "../Footer/Footer";
 
 const TRACKING_ID = "G-PJ3ERX3LDC";
 
@@ -112,18 +110,23 @@ const ContactUs = () => {
 
   return (
     <>
-     {/* <Header /> */}
-    
-    <div className="row m-auto mb-5 mt-4 ps-3 pe-3">
-      <div className="col-md-5 m-auto">
-        <img className="contactus" src="./contact-us.png" />
-        <div className="mt-4">
+      <div className="row m-auto mb-5 mt-4 ps-3 pe-3">
+        <div>
           <h3 className="contact-title">Get In Touch</h3>
           <p>
             If you{"'"}ve got more than just a general enquiry, you can find
             details on how to reach us as given below.
           </p>
-          <div className="row ">
+        </div>
+        <div className="col-md-5 m-auto">
+          <img className="contactus" src="./contact-us.png" />
+          <div className="mt-4">
+            {/* <h3 className="contact-title">Get In Touch</h3>
+          <p>
+            If you{"'"}ve got more than just a general enquiry, you can find
+            details on how to reach us as given below.
+          </p> */}
+            {/* <div className="row ">
             <div className="col-xxl-6 col-lg-12 col-sm-6 contat-contaier">
               <div className="contact-detail-box mt-3">
                 <div className="contact-icon">
@@ -136,17 +139,7 @@ const ContactUs = () => {
                   <a href="tel:+1 732 742 6875">+1 732 742 6875</a>
                 </div>
               </div>
-              {/* <div className="contact-detail-box mt-3">
-                <div className="contact-icon">
-                  <PiWhatsappLogoBold />
-                </div>
-                <div className="row contact-detail-title">
-                  <h5>Whatsapp</h5>
-                </div>
-                <div className="row contact-detail-title">
-                  <a href="tel:+1 732 742 6875">+1 732 742 6875</a>
-                </div>
-              </div> */}
+
               <div className="contact-detail-box mt-3">
                 <div className="contact-icon">
                   <MdEmail />
@@ -159,100 +152,99 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
+          </div> */}
           </div>
         </div>
-      </div>
-      <div className="col-md-5 ">
-        <h3 className="mb-3 ContactUsHeading">Contact Us</h3>
-        <form onSubmit={handleSubmit} className="enquire-now">
-          <Grid container spacing={3.5}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                className="contact-input"
-                value={formData.name}
-                onChange={handleInputChange}
-                placeholder="Name"
-                name="name"
-                variant="outlined"
-                fullWidth
-              />
+        <div className="col-md-5 ">
+          {/* <h3 className="mb-3 ContactUsHeading">Contact Us</h3> */}
+          <form onSubmit={handleSubmit} className="enquire-now">
+            <Grid container spacing={3.5}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  className="contact-input"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Name"
+                  name="name"
+                  variant="outlined"
+                  fullWidth
+                />
 
-              {errors.name && <p className="ContactError">{errors.name}</p>}
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                className="contact-input"
-                value={formData.email}
-                onChange={handleInputChange}
-                name="email"
-                placeholder="Email"
-                type="email"
-                variant="outlined"
-                fullWidth
-              />
+                {errors.name && <p className="ContactError">{errors.name}</p>}
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  className="contact-input"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  name="email"
+                  placeholder="Email"
+                  type="email"
+                  variant="outlined"
+                  fullWidth
+                />
 
-              {errors.email && <p className="ContactError">{errors.email}</p>}
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                className="contact-input"
-                value={formData.Phone}
-                onChange={handleInputChange}
-                name="Phone"
-                placeholder="Phone"
-                variant="outlined"
-                fullWidth
-              />
+                {errors.email && <p className="ContactError">{errors.email}</p>}
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  className="contact-input"
+                  value={formData.Phone}
+                  onChange={handleInputChange}
+                  name="Phone"
+                  placeholder="Phone"
+                  variant="outlined"
+                  fullWidth
+                />
 
-              {errors.Phone && <p className="ContactError">{errors.Phone}</p>}
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                className="contact-input"
-                value={formData.message}
-                onChange={handleInputChange}
-                name="message"
-                placeholder="Message"
-                multiline
-                rows={3}
-                variant="outlined"
-                fullWidth
-              />
+                {errors.Phone && <p className="ContactError">{errors.Phone}</p>}
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  className="contact-input"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  name="message"
+                  placeholder="Message"
+                  multiline
+                  rows={3}
+                  variant="outlined"
+                  fullWidth
+                />
 
-              {errors.message && (
-                <p className="ContactError">{errors.message}</p>
-              )}
-            </Grid>
-            <Grid
-              item
-              xs={12}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-around",
-                flexWrap: "wrap",
-                gap: "1rem",
-              }}
-            >
-              <Button
-                type="submit"
-                variant="contained"
-                color="primary"
+                {errors.message && (
+                  <p className="ContactError">{errors.message}</p>
+                )}
+              </Grid>
+              <Grid
+                item
+                xs={12}
                 style={{
-                  background: "#36a554",
-                  width: "8.5rem",
-                  textAlign: "center",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-around",
+                  flexWrap: "wrap",
+                  gap: "1rem",
                 }}
-                onClick={() => handleGoogleEvent("contactUs")}
               >
-                Enquire Now
-              </Button>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  style={{
+                    background: "#36a554",
+                    width: "8.5rem",
+                    textAlign: "center",
+                  }}
+                  onClick={() => handleGoogleEvent("contactUs")}
+                >
+                  Enquire Now
+                </Button>
+              </Grid>
             </Grid>
-          </Grid>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
-    {/* <Footer/> */}
     </>
   );
 };

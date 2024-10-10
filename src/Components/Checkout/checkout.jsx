@@ -9,8 +9,6 @@ import "./checkout.css";
 import { useDispatch } from "react-redux";
 
 import { clearCart } from "../Redux/cartSlice";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 
 export default function Checkout() {
   const userdata = JSON.parse(localStorage.getItem("userdata"));
@@ -64,13 +62,13 @@ export default function Checkout() {
 
   const loadCountryOptions = () => {
     const countries = Country.getAllCountries();
-    const formattedCountries = countries.map(country => ({
+    const formattedCountries = countries.map((country) => ({
       value: country.isoCode,
       label: country.name,
     }));
     setCountryOptions(formattedCountries);
     const defaultCountry = formattedCountries.find(
-      country => country.value === "US"
+      (country) => country.value === "US"
     );
     setSelectedCountry(defaultCountry);
   };
@@ -78,7 +76,7 @@ export default function Checkout() {
   useEffect(() => {
     if (selectedCountry) {
       const states = State.getStatesOfCountry(selectedCountry.value);
-      const formattedStates = states.map(state => ({
+      const formattedStates = states.map((state) => ({
         value: state.isoCode,
         label: state.name,
       }));
@@ -129,25 +127,24 @@ export default function Checkout() {
     // Step 1: Get current date in the format YYYYMMDD
     const today = new Date();
     const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-based
-    const day = String(today.getDate()).padStart(2, '0');
-  
+    const month = String(today.getMonth() + 1).padStart(2, "0"); // Months are 0-based
+    const day = String(today.getDate()).padStart(2, "0");
+
     // Step 2: Calculate the next order number based on OrderData length
     const orderNumber = OrderData.length + 1;
-  
+
     // Step 3: Pad the order number to 4 digits (e.g., 0001, 0002, etc.)
-    const paddedOrderNumber = String(orderNumber).padStart(4, '0');
-  
+    const paddedOrderNumber = String(orderNumber).padStart(4, "0");
+
     // Step 4: Append "S01" to the order number
     const orderID = `${year}${month}${day}${paddedOrderNumber}S01`;
-  
+
     return orderID;
   };
-  
 
   const newOrderID = generateOrderID(OrderData);
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const form = e.currentTarget;
@@ -207,11 +204,10 @@ export default function Checkout() {
         return;
       }
 
-      const products = cartItems.map(cartItem => ({
+      const products = cartItems.map((cartItem) => ({
         productId: cartItem?._id,
-      
+
         quantity: cartItem?.quantity,
-  
       }));
 
       const data = {
@@ -251,7 +247,7 @@ export default function Checkout() {
     }
   };
   const [phoneNumber, setPhoneNumber] = useState("");
-  const handlePhoneInput = e => {
+  const handlePhoneInput = (e) => {
     let value = e.target.value.replace(/\D/g, "");
     if (value.length > 3 && value.length <= 6) {
       value = value.replace(/^(\d{3})(\d{1,3})/, "$1 $2");
@@ -260,22 +256,22 @@ export default function Checkout() {
     }
     setPhoneNumber(value);
   };
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setPayloadData(prev => ({ ...prev, [name]: value }));
+    setPayloadData((prev) => ({ ...prev, [name]: value }));
   };
-  const formatExpDate = value => {
+  const formatExpDate = (value) => {
     return value
       .replace(/^([1-9])$/, "$1")
       .replace(/^(\d{2})(\d{1,2})/, "$1/$2")
       .substr(0, 5);
   };
-  const handleCardNumberChange = e => {
+  const handleCardNumberChange = (e) => {
     const value = e.target.value.replace(/\D/g, "");
     setCardNumber(value.replace(/(.{4})/g, "$1 ").trim());
   };
 
-  const handleCvvChange = e => {
+  const handleCvvChange = (e) => {
     const value = e.target.value.replace(/\D/g, "");
     setCvv(value);
   };
@@ -283,10 +279,9 @@ export default function Checkout() {
 
   return (
     <>
-     <Header />
-    <div className="row bg-light m-auto">
-      <Toaster />
-     
+      <div className="row bg-light m-auto">
+        <Toaster />
+
         <div className="row m-auto">
           <div className="col-md-8 m-auto">
             <p className="checkout-subheading">Contact Information</p>
@@ -294,12 +289,11 @@ export default function Checkout() {
               Already have an account? <a href="/login">Login</a>
             </p>
 
-            <Form  noValidate validated={validated} onSubmit={handleSubmit}>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
               <Form.Group as={Col} md="12" controlId="validationCustom01">
                 <Form.Label>First name</Form.Label>
                 <Form.Control
                   placeholder="Email address"
-                  
                   onChange={handleChange}
                   value={payloadData.email}
                   name="email"
@@ -312,8 +306,13 @@ export default function Checkout() {
                 </Form.Control.Feedback>
               </Form.Group>
               <p className="checkout-subheading">Billing address</p>
-              <Row >
-                <Form.Group className="mb-3" as={Col} md="4" controlId="validationCustom01">
+              <Row>
+                <Form.Group
+                  className="mb-3"
+                  as={Col}
+                  md="4"
+                  controlId="validationCustom01"
+                >
                   <Form.Label>First name</Form.Label>
                   <Form.Control
                     required
@@ -328,7 +327,12 @@ export default function Checkout() {
                     {errors.fName}
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group className="mb-3" as={Col} md="4" controlId="validationCustom02">
+                <Form.Group
+                  className="mb-3"
+                  as={Col}
+                  md="4"
+                  controlId="validationCustom02"
+                >
                   <Form.Label>Last name</Form.Label>
                   <Form.Control
                     required
@@ -336,21 +340,24 @@ export default function Checkout() {
                     value={payloadData.lName}
                     name="lName"
                     placeholder="Last name"
-                    
                     isInvalid={!!errors.lName}
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.lName}
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group className="mb-3" as={Col} md="4" controlId="validationCustom02">
+                <Form.Group
+                  className="mb-3"
+                  as={Col}
+                  md="4"
+                  controlId="validationCustom02"
+                >
                   <Form.Label>Phone</Form.Label>
                   <Form.Control
                     onChange={handlePhoneInput}
                     value={phoneNumber}
                     name="phone"
                     placeholder="XXX XXX XXXX"
-                    
                     isInvalid={!!errors.phoneNumber}
                     required
                   />
@@ -360,33 +367,46 @@ export default function Checkout() {
                 </Form.Group>
               </Row>
 
-              <Row >
-                <Form.Group className="mb-3" as={Col} md="6" controlId="validationCustom01">
+              <Row>
+                <Form.Group
+                  className="mb-3"
+                  as={Col}
+                  md="6"
+                  controlId="validationCustom01"
+                >
                   <Form.Control
                     onChange={handleChange}
                     value={payloadData.address}
                     name="address"
                     placeholder="Address Line 1"
                     isInvalid={!!errors.address}
-                    
                     required
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.address}
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group className="mb-3" as={Col} md="6" controlId="validationCustom02">
+                <Form.Group
+                  className="mb-3"
+                  as={Col}
+                  md="6"
+                  controlId="validationCustom02"
+                >
                   <Form.Control
                     onChange={handleChange}
                     value={payloadData.flatAddress}
                     name="flatAddress"
                     placeholder="Address Line 2 (optional)"
-                    
                   />
                 </Form.Group>
               </Row>
-              <Row >
-                <Form.Group className="mb-3" as={Col} md="6" controlId="validationCustom01">
+              <Row>
+                <Form.Group
+                  className="mb-3"
+                  as={Col}
+                  md="6"
+                  controlId="validationCustom01"
+                >
                   <Form.Control
                     onChange={handleChange}
                     value={payloadData.city}
@@ -399,7 +419,12 @@ export default function Checkout() {
                     {errors.city}
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group className="mb-3" as={Col} md="6" controlId="validationCustom02">
+                <Form.Group
+                  className="mb-3"
+                  as={Col}
+                  md="6"
+                  controlId="validationCustom02"
+                >
                   <Select
                     options={stateOptions}
                     value={selectedState}
@@ -408,14 +433,13 @@ export default function Checkout() {
                   />
                 </Form.Group>
               </Row>
-              <Row >
+              <Row>
                 <Form.Group as={Col} md="6" controlId="validationCustom02">
                   <Form.Control
                     onChange={handleChange}
                     value={payloadData.zipcode}
                     name="zipcode"
                     placeholder="Zip code"
-                    
                     required
                     isInvalid={!!errors.zipcode}
                     maxLength="6"
@@ -428,7 +452,12 @@ export default function Checkout() {
               <Row>
                 <p className="checkout-subheading p-2">Payment details</p>
 
-                <Form.Group className="mb-3" as={Col} md="4" controlId="validationCustom02">
+                <Form.Group
+                  className="mb-3"
+                  as={Col}
+                  md="4"
+                  controlId="validationCustom02"
+                >
                   <Form.Label>Card Number</Form.Label>
                   <Form.Control
                     type="text"
@@ -443,12 +472,17 @@ export default function Checkout() {
                     {errors.cardNumber}
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group className="mb-3" as={Col} md="4" controlId="validationCustom02">
+                <Form.Group
+                  className="mb-3"
+                  as={Col}
+                  md="4"
+                  controlId="validationCustom02"
+                >
                   <Form.Label>Expiry Date</Form.Label>
                   <Form.Control
                     type="text"
                     value={formatExpDate(expMonth + expYear)}
-                    onChange={e => {
+                    onChange={(e) => {
                       let value = e.target.value.replace(/\D/g, "");
 
                       let month = value.slice(0, 2);
@@ -471,7 +505,12 @@ export default function Checkout() {
                     required
                   />
                 </Form.Group>
-                <Form.Group className="mb-3" as={Col} md="4" controlId="validationCustom02">
+                <Form.Group
+                  className="mb-3"
+                  as={Col}
+                  md="4"
+                  controlId="validationCustom02"
+                >
                   <Form.Label>CVV</Form.Label>
                   <Form.Control
                     type="text"
@@ -483,8 +522,6 @@ export default function Checkout() {
                   />
                 </Form.Group>
               </Row>
-
-             
             </Form>
           </div>
 
@@ -502,15 +539,14 @@ export default function Checkout() {
             </div>
           </div>
         </div>
-      <div className="row mb-5" >
-
-      <div className="checkout-row mt-3">
-                <button className="checkout-button" type="submit">
-                  Pay Now
-                </button>
-              </div>
+        <div className="row mb-5">
+          <div className="checkout-row mt-3">
+            <button className="checkout-button" type="submit">
+              Pay Now
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-    <Footer/></>
+    </>
   );
 }

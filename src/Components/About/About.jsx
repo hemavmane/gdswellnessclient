@@ -1,18 +1,21 @@
-
-
 import React,{ useEffect } from "react";
 import "./Style/About.css";
 import { useNavigate } from "react-router-dom";
 import { abtData01 } from "./Content/AboutContent";
 import { abtData02 } from "./Content/AboutContent";
 import { abtData03 } from "./Content/AboutContent";
-import aboutUs from "../Images/aboutUs.png";
-import aboutUsImage02 from "../Images/aboutUsImage02.png";
-import aboutUsImage03 from "../Images/aboutUsImage03.png";
-import aboutimage01 from "../Images/aboutimage01.png";
+// import aboutUs from "../Images/aboutUs.png";
+import aboutusimage01 from "../Images/aboutusimage01.png";
+import aboutusimage02 from "../Images/aboutusimage02.png";
+import aboutusimage03 from "../Images/aboutusimage03.png";
+import aboutusimage04 from "../Images/aboutusimage04.png";
+// import aboutimage01 from "../../../../../../GDS-IMAGES/aboutus/New folder/aboutimage04.png";
+// import aboutimage02  from  "../../../../../GDS-IMAGES/aboutus/whoweare/aboutimage16.png"
+// import aboutimage03  from  "../../../../../GDS-IMAGES/aboutus/whoweare/aboutimage11.png"
+// import aboutUsImage03 from "../Images/aboutUsImage03.png";
+// import aboutimage01 from "../Images/aboutimage01.png";
 import ReactGA from "react-ga4";
-// import Header from "../Header/Header";
-// import Footer from "../Footer/Footer";
+
 const TRACKING_ID = "G-PJ3ERX3LDC"
 
 const About = () => {
@@ -24,13 +27,13 @@ useEffect(()=>{
   const navigate = useNavigate();
   return (
     <>
-    {/* <Header /> */}
+ 
     
     <div className="About">
-      <h1>
+      {/* <h1>
         <span onClick={() => navigate("/")}>Home</span>/<span>About Us</span>
-      </h1>
-      <img src={aboutUs} alt="" className="AboutImage01" />
+      </h1> */}
+      <img src={aboutusimage01} alt="" className="AboutImage01" />
 
 
 
@@ -38,7 +41,7 @@ useEffect(()=>{
         <div className="AboutContainerA_Left">
           <div className="AboutContainerA_Left_Heading_And_Icon">
             
-            <img style={{width:"5rem"}} src="https://img.freepik.com/free-vector/illustration-light-bulb-icon_53876-5884.jpg?size=626&ext=jpg&ga=GA1.1.1858061974.1715842898&semt=ais_user" alt="" />
+            <img src={aboutusimage02} alt="" />
             <h1>Our Story</h1>
           </div>
           <p>At GDS Wellness, we believe in enhancing wellness and empowering individuals to embrace good health with an eye on chemical free products with confidence. We're more than just an online store; we're a passionate team dedicated to fostering positive wellness experiences. We meticulously choose products from reputable brands known for safety, innovation, and effectiveness. We prioritise health and cater to a wide range of products. We understand that wellness is a spectrum, and individual needs are diverse and therefore we continuously keep adding products for a wide variety of consumers. That's why we curate a wide range of high-quality wellness products from a variety of trusted brands. Whether you're a seasoned explorer or just starting your journey, we have something for everyone.</p>
@@ -47,15 +50,15 @@ useEffect(()=>{
           <div className="AboutContainerA_Right_Top">
             <div className="AboutContainerA_Right_Top_HeadingAndIcon">
               
-              <img style={{width:"5rem"}} src="https://cdn-icons-png.freepik.com/256/10223/10223479.png?ga=GA1.1.1858061974.1715842898&semt=ais_hybrid" alt="" />
-              <h1>Who We Are</h1>      
+              <img src={aboutusimage03} alt="who we are" />
+              <p>Who We Are</p>      
             </div>
             <p>GDS Wellness Is a leading provider of plant based wellness products designed to give you a complete natural health and wellness regime. Our team is dedicated to curating a diverse range of high-quality products that cater to the needs and desires of our customers.</p>
           </div>
           <div className="AboutContainerA_Right_Bottom">
             <div className="AboutContainerA_Right_Bottom_HeadingAndIcon">
-              <img style={{width:"5.3rem"}} src="https://img.freepik.com/premium-vector/job-online-target-icon-flat-vector-business-search-internet-work-isolated_98396-65091.jpg?w=740" alt="" />
-              <h1>Our Mission</h1>
+              <img  src={aboutusimage04} alt="our mission" />
+              <p>Our Mission</p>
             </div>
             <p>Our mission is to promote well-being through education, innovation, and empowerment. We strive to break down barriers and stigmas surrounding, creating a safe and welcoming space for exploration and self-discovery.</p>
           </div>
@@ -97,14 +100,14 @@ useEffect(()=>{
         </div>
       </div>
 
-      <div className="AboutContainer03" >
+      {/* <div className="AboutContainer03" >
         <p>
         At GDS Wellness, we believe that wellness is an essential component of overall well-being. Join us on a journey of chemical free nutrients that will supplement your health needs. Welcome to a world of endless possibilities. For any suggestions or feedback or any new product that you may have on your mind, please feel free to speak to one of our Customer Support Executives over the phone or email us support@gdswellness.com and we will definitely help you out with your request.
         </p>
         <img src={aboutimage01} alt="" style={{width:"100%",height:"auto"}} />
-      </div>
+      </div> */}
     </div>
-    {/* <Footer/> */}
+  
     </>
   );
 };

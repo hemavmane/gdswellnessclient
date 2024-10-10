@@ -25,14 +25,10 @@
   margin-left: 2px;
 }
 
-@media only screen and (max-width: 500px) {
-  .enquire-now {
-    padding: 1rem;
-  }
-}
+
 
 .contactus {
-  width: 50%;
+  width: 100%;
 }
 
 .contact-icon {
@@ -87,4 +83,10 @@
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  .enquire-now {
+    padding: 1rem;
+  }
 }

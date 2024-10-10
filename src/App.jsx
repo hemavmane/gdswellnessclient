@@ -1,8 +1,9 @@
 import React, { useEffect, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { RotatingLines } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import "./App.css";
-import { RiLoader4Fill } from "react-icons/ri";
+
 import { useLocation } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
@@ -56,14 +57,26 @@ function App() {
               alignItems: "center",
               justifyContent: "center",
               height: "90vh",
-            }}>
-            <RiLoader4Fill style={{ color: "darkblue", fontSize: "8rem" }} />
+            }}
+          >
+            <RotatingLines
+              visible={true}
+              height="96"
+              width="96"
+              color="grey"
+              strokeWidth="5"
+              animationDuration="0.75"
+              ariaLabel="rotating-lines-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
           </div>
-        }>
+        }
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
+          {/* <Route path="/about" element={<About />} /> */}
           <Route path="/policy/privacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/policy/ReturnPolicy" element={<ReturnPolicy />} />
           <Route path="/policy/ShippingPolicy" element={<ShippingPolicy />} />
@@ -71,8 +84,7 @@ function App() {
           <Route path="/shop" element={<Shopping />} />
           <Route path="/product/:productname_slug" element={<Product />} />
           <Route path="/cart" element={<CartData />} />
-         
-        
+
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/success" element={<Success />} />
           <Route path="/failure" element={<Failure />} />
@@ -81,14 +93,10 @@ function App() {
 
           {/* nodemailer */}
           {/* {user && <Route path="/" exact element={<Main />} />} */}
-          <Route path="/registration"  element={<SignUp />} />
-          <Route path="/login"  element={<SignIn />} />
+          <Route path="/registration" element={<SignUp />} />
+          <Route path="/login" element={<SignIn />} />
           <Route path="/" element={<Navigate replace to="/login" />} />
-          <Route
-            path="/users/:id/verify/:token"
-            
-            element={<EmailVerify />}
-          />
+          <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Suspense>
