@@ -6,7 +6,7 @@ import { abtData02 } from "./Content/AboutContent";
 import { abtData03 } from "./Content/AboutContent";
 // import aboutUs from "../Images/aboutUs.png";
 import aboutusimage01 from "../Images/aboutusimage01.png";
-import aboutusimage02 from "../Images/aboutusimage02.png";
+// import aboutusimage02 from "../Images/aboutusimage02.png";
 import aboutusimage03 from "../Images/aboutusimage03.png";
 import aboutusimage04 from "../Images/aboutusimage04.png";
 // import aboutimage01 from "../../../../../../GDS-IMAGES/aboutus/New folder/aboutimage04.png";
