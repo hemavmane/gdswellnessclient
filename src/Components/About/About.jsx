@@ -5,10 +5,10 @@ import { abtData01 } from "./Content/AboutContent";
 import { abtData02 } from "./Content/AboutContent";
 import { abtData03 } from "./Content/AboutContent";
 // import aboutUs from "../Images/aboutUs.png";
-import aboutusimage01 from "../Images/aboutusimage01.png";
+// import aboutusimage01 from "../Images/aboutusimage01.png";
 // import aboutusimage02 from "../Images/aboutusimage02.png";
-import aboutusimage03 from "../Images/aboutusimage03.png";
-import aboutusimage04 from "../Images/aboutusimage04.png";
+// import aboutusimage03 from "../Images/aboutusimage03.png";
+// import aboutusimage04 from "../Images/aboutusimage04.png";
 // import aboutimage01 from "../../../../../../GDS-IMAGES/aboutus/New folder/aboutimage04.png";
 // import aboutimage02  from  "../../../../../GDS-IMAGES/aboutus/whoweare/aboutimage16.png"
 // import aboutimage03  from  "../../../../../GDS-IMAGES/aboutus/whoweare/aboutimage11.png"
@@ -33,7 +33,7 @@ useEffect(()=>{
       {/* <h1>
         <span onClick={() => navigate("/")}>Home</span>/<span>About Us</span>
       </h1> */}
-      <img src={aboutusimage01} alt="" className="AboutImage01" />
+      <img src='../Images/aboutusimage01.png' alt="" className="AboutImage01" />
 
 
 
@@ -41,7 +41,7 @@ useEffect(()=>{
         <div className="AboutContainerA_Left">
           <div className="AboutContainerA_Left_Heading_And_Icon">
             
-            <img src='./Images/aboutusimage02.png' alt="" />
+            <img src='../Images/aboutusimage02.png' alt="" />
             <h1>Our Story</h1>
           </div>
           <p>At GDS Wellness, we believe in enhancing wellness and empowering individuals to embrace good health with an eye on chemical free products with confidence. We're more than just an online store; we're a passionate team dedicated to fostering positive wellness experiences. We meticulously choose products from reputable brands known for safety, innovation, and effectiveness. We prioritise health and cater to a wide range of products. We understand that wellness is a spectrum, and individual needs are diverse and therefore we continuously keep adding products for a wide variety of consumers. That's why we curate a wide range of high-quality wellness products from a variety of trusted brands. Whether you're a seasoned explorer or just starting your journey, we have something for everyone.</p>
@@ -50,14 +50,14 @@ useEffect(()=>{
           <div className="AboutContainerA_Right_Top">
             <div className="AboutContainerA_Right_Top_HeadingAndIcon">
               
-              <img src={aboutusimage03} alt="who we are" />
+              <img src='./Images/aboutusimage03.png' alt="who we are" />
               <p>Who We Are</p>      
             </div>
             <p>GDS Wellness Is a leading provider of plant based wellness products designed to give you a complete natural health and wellness regime. Our team is dedicated to curating a diverse range of high-quality products that cater to the needs and desires of our customers.</p>
           </div>
           <div className="AboutContainerA_Right_Bottom">
             <div className="AboutContainerA_Right_Bottom_HeadingAndIcon">
-              <img  src={aboutusimage04} alt="our mission" />
+              <img  src='../Images/aboutusimage04.png' alt="our mission" />
               <p>Our Mission</p>
             </div>
             <p>Our mission is to promote well-being through education, innovation, and empowerment. We strive to break down barriers and stigmas surrounding, creating a safe and welcoming space for exploration and self-discovery.</p>
