@@ -41,7 +41,7 @@ useEffect(()=>{
         <div className="AboutContainerA_Left">
           <div className="AboutContainerA_Left_Heading_And_Icon">
             
-            <img src={aboutusimage02} alt="" />
+            <img src='./Images/aboutusimage02.png' alt="" />
             <h1>Our Story</h1>
           </div>
           <p>At GDS Wellness, we believe in enhancing wellness and empowering individuals to embrace good health with an eye on chemical free products with confidence. We're more than just an online store; we're a passionate team dedicated to fostering positive wellness experiences. We meticulously choose products from reputable brands known for safety, innovation, and effectiveness. We prioritise health and cater to a wide range of products. We understand that wellness is a spectrum, and individual needs are diverse and therefore we continuously keep adding products for a wide variety of consumers. That's why we curate a wide range of high-quality wellness products from a variety of trusted brands. Whether you're a seasoned explorer or just starting your journey, we have something for everyone.</p>
