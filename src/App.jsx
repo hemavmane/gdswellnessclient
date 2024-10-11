@@ -67,8 +67,7 @@ function App() {
               strokeWidth="5"
               animationDuration="0.75"
               ariaLabel="rotating-lines-loading"
-              wrapperStyle={{}}
-              wrapperClass=""
+            
             />
           </div>
         }
@@ -76,7 +75,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/about" element={<About />} />
           <Route path="/policy/privacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/policy/ReturnPolicy" element={<ReturnPolicy />} />
           <Route path="/policy/ShippingPolicy" element={<ShippingPolicy />} />

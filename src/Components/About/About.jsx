@@ -67,7 +67,7 @@ useEffect(()=>{
 
       <div className="AboutContainer02">
         <div className="AboutContainer02SubContainer01">
-          <h2>We Achieve This By</h2>
+          <p>We Achieve This By</p>
           <div className="AboutContainer02SubContainer01HeadingsAndDescriptions">
             {abtData02.map((ele, ind) => {
               return (
@@ -83,7 +83,7 @@ useEffect(()=>{
           </div>
         </div>
         <div className="AboutContainer02SubContainer02">
-          <h2>Why Choose GDWellness</h2>
+          <p>Why Choose GDWellness</p>
           <div className="AboutContainer02SubContainer02HeadingsAndDescriptions">
             {abtData03.map((ele, ind) => {
               return (
