@@ -1,7 +1,8 @@
 import React,{ useEffect } from "react";
 import "./Style/About.css";
 import aboutusimage01 from "../Images/aboutusimage01.png";
-import aboutusimage02 from "../Images/aboutusimage02.png";
+import abtimg02 from "../Images/abtimg02.png";
+
 import aboutusimage03 from "../Images/aboutusimage03.png";
 import aboutusimage04 from "../Images/aboutusimage04.png";
 import { useNavigate } from "react-router-dom";
@@ -36,7 +37,7 @@ useEffect(()=>{
         <div className="AboutContainerA_Left">
           <div className="AboutContainerA_Left_Heading_And_Icon">
             
-            <img src={aboutusimage02} alt="aboutusimage02" />
+            <img src={abtimg02} alt="aboutusimage02" />
             <h1>Our Story</h1>
           </div>
           <p>At GDS Wellness, we believe in enhancing wellness and empowering individuals to embrace good health with an eye on chemical free products with confidence. We're more than just an online store; we're a passionate team dedicated to fostering positive wellness experiences. We meticulously choose products from reputable brands known for safety, innovation, and effectiveness. We prioritise health and cater to a wide range of products. We understand that wellness is a spectrum, and individual needs are diverse and therefore we continuously keep adding products for a wide variety of consumers. That's why we curate a wide range of high-quality wellness products from a variety of trusted brands. Whether you're a seasoned explorer or just starting your journey, we have something for everyone.</p>
