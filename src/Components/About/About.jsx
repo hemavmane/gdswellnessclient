@@ -3,7 +3,7 @@ import "./Style/About.css";
 import aboutusimage01 from "../Images/aboutusimage01.png";
 import abtimg02 from "../Images/abtimg02.png";
 
-import aboutusimage03 from "../Images/aboutusimage03.png";
+import abtimg03 from "../Images/abtimg03.png";
 import aboutusimage04 from "../Images/aboutusimage04.png";
 import { useNavigate } from "react-router-dom";
 import { abtData01 } from "./Content/AboutContent";
@@ -46,7 +46,7 @@ useEffect(()=>{
           <div className="AboutContainerA_Right_Top">
             <div className="AboutContainerA_Right_Top_HeadingAndIcon">
               
-              <img src={aboutusimage03} alt="who we are" />
+              <img src={abtimg03} alt="who we are" />
               <p>Who We Are</p>      
             </div>
             <p>GDS Wellness Is a leading provider of plant based wellness products designed to give you a complete natural health and wellness regime. Our team is dedicated to curating a diverse range of high-quality products that cater to the needs and desires of our customers.</p>
