@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Style/Header.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -14,11 +14,8 @@ import {
 } from "../Redux/cartSlice";
 
 const Header = () => {
-  const userdata = localStorage.getItem("userdata");
   const [menuOpen, setMenuOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
-
-  let data = JSON.parse(userdata) || null;
 
   const cartItems = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
@@ -72,8 +69,18 @@ const Header = () => {
     localStorage.removeItem("userdata");
     setuserOpen(false);
     alert("You have successfully logged out!");
-    window.location.reload(); // changed from window.reload to window.location.reload
+    window.location.reload();
   };
+
+  const [userInfo, setUserInfo] = useState(null);
+
+  useEffect(() => {
+    const data = localStorage.getItem("userdata");
+    const userData = JSON.parse(data);
+    setUserInfo(userData);
+    console.log(data,"data")
+  }, []);
+ 
 
   return (
     <>
@@ -110,12 +117,9 @@ const Header = () => {
           </li>
 
           <li>
-            {userdata ? (
+            {userInfo ? (
               <NavLink onClick={() => setuserOpen(true)}>
-                {" "}
-                {data?.username
-                  ? data.username.toUpperCase()
-                  : data.displayName}
+                {userInfo.username.toUpperCase()}
               </NavLink>
             ) : (
               <NavLink to="/login" onClick={() => setMenuOpen(!menuOpen)}>
@@ -158,15 +162,15 @@ const Header = () => {
           <div className="row">
             <p>
               <span className="me-3 bold">Account Name : </span>
-              {data?.username}
+              {userInfo?.username}
             </p>
             <p>
               <span className="me-3 bold">Contact : </span>
-              {data?.phone}
+              {userInfo?.phone}
             </p>
             <p>
               <span className="me-3 bold">Email : </span>
-              {data?.email}
+              {userInfo?.email}
             </p>
             <a className="row m-0 fs-5 cursor" href="/order">
               My Orders

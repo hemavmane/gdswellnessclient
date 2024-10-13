@@ -21,7 +21,7 @@ function Verify() {
 
   return (
     <>
-    <Header/>
+   
     
     <div className="app">
       <h2 className="app">Email Sending Form</h2>
@@ -52,7 +52,7 @@ function Verify() {
         <button>{loading ? "Loading..." : "Send Email 🚀"}</button>
       </form>
     </div>
-    <Footer/>
+   
     </>
   );
 }

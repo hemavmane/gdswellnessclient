@@ -48,7 +48,7 @@ function App() {
   return (
     <>
     
-    <GoogleOAuthProvider clientId="840056468251-t889pfib487n8hh6h67ogp342dl477ds.apps.googleusercontent.com">
+    {/* <GoogleOAuthProvider clientId="840056468251-j7cmimpf0vha8bv13pcqif13plklt8fn.apps.googleusercontent.com"> */}
       <Header />
       <Suspense
         fallback={
@@ -96,7 +96,7 @@ function App() {
         </Routes>
       </Suspense>
       <Footer />
-    </GoogleOAuthProvider>
+    {/* </GoogleOAuthProvider> */}
     </>
   );
 }
