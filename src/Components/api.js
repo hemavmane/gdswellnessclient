@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: "https://gdswellness.com/api/contact",
+    baseURL: "https://api.gdswellness.com/api/contact",
 
 });
 

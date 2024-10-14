@@ -1,5 +1,5 @@
 
-Sitemap: https://gdswellness.com/sitemap_index.xml
+Sitemap: https://api.gdswellness.com/sitemap_index.xml
 User-agent: *
 Disallow: /admin
 Disallow: /private

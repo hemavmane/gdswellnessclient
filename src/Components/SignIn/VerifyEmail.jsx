@@ -41,7 +41,7 @@ const EmailVerification = () => {
   const handleSignInLink = async e => {
     e.preventDefault();
     const actionCodeSettings = {
-      url: "https://gdswellness.com/registration",
+      url: "https://api.gdswellness.com/registration",
       handleCodeInApp: true,
     };
 

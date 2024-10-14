@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://gdswellness.com/</loc>
+      <loc>https://api.gdswellness.com/</loc>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://gdswellness.com/contact</loc>
+      <loc>https://api.gdswellness.com/contact</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://gdswellness.com/about</loc>
+      <loc>https://api.gdswellness.com/about</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://gdswellness.com/policy/privacyPolicy</loc>
+      <loc>https://api.gdswellness.com/policy/privacyPolicy</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://gdswellness.com/policy/ReturnPolicy</loc>
+      <loc>https://api.gdswellness.com/policy/ReturnPolicy</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://gdswellness.com/termsAndConditions</loc>
+      <loc>https://api.gdswellness.com/termsAndConditions</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>

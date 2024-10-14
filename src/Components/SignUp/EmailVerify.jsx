@@ -13,7 +13,7 @@ const EmailVerify = () => {
   useEffect(() => {
     const VerifyEmail = async () => {
       try {
-        const url = `https://gdswellness.com/api/contact/${param.id}/verify/${param.token}`;
+        const url = `https://api.gdswellness.com/api/contact/${param.id}/verify/${param.token}`;
         const { data } = await axios.get(url);
         console.log(data, "data");
         setValidUrl(true);

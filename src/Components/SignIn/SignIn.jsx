@@ -34,7 +34,7 @@ import { useParams } from "react-router-dom";
 //       {...props}
 //     >
 //       {"Copyright © "}
-//       <Link color="inherit" href="https://gdswellness.com/">
+//       <Link color="inherit" href="https://api.gdswellness.com/">
 //         gdswellness.com
 //       </Link>{" "}
 //       {new Date().getFullYear()}
@@ -205,7 +205,7 @@ const SignIn = () => {
     const verifyEmail = async () => {
       if (id && token) {
         try {
-          const url = `https://gdswellness.com/api/contact/${id}/verify/${token}`;
+          const url = `https://api.gdswellness.com/api/contact/${id}/verify/${token}`;
           const response = await axios.get(url);
           console.log("Verification success", response.data);
           setMsg("Email verified successfully!");
@@ -220,7 +220,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://gdswellness.com/api/contact/emailsignin";
+      const url = "https://api.gdswellness.com/api/contact/emailsignin";
       const response = await axios.post(url, data);
       localStorage.setItem("user", JSON.stringify(response.data));
       window.location = "/";

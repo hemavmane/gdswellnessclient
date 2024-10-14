@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-sitemap:https://gdswellness.com/sitemap.xml
+sitemap:https://api.gdswellness.com/sitemap.xml

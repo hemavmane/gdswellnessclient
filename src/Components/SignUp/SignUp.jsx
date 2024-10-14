@@ -245,9 +245,9 @@ const SignUp = () => {
   const [loading, setLoading] = useState(false);
   const handleSubmit = async e => {
     e.preventDefault();
-    setLoading(true); // Start loading
+    setLoading(true);
     try {
-      const url = "https://gdswellness.com/api/contact/emailsignup";
+      const url = "https://api.gdswellness.com/api/contact/emailsignup";
       const { data: res } = await axios.post(url, data);
       setMsg(res.message);
       setData({ firstName: "", lastName: "", email: "", password: "" });
@@ -261,7 +261,7 @@ const SignUp = () => {
         setError(error.response.data.message);
       }
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false); 
     }
   };
 
@@ -325,7 +325,7 @@ const SignUp = () => {
           <div className="google-signup-container">
             <button className="google-signup-btn" onClick={googleSignup}>
               <FcGoogle className="google-icon" />
-              Sign in with Google
+              Sign up with Google
             </button>
           </div>
         </div>
