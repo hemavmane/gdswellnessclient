@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
-// import "./Product.css";
 import { useLocation, useNavigate, useParams } from "react-router";
 import axios from "axios";
 import Magnifier from "react-magnifier";
 import Slider from "react-slick";
-const ReactApi = "https://api.gdswellness.com";
+
 import { addToCart } from "../Redux/cartSlice";
 import { LineWave } from "react-loader-spinner";
 import { useDispatch } from "react-redux";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+const ReactApi = "https://api.gdswellness.com";
 export default function Product() {
   const { productname_slug } = useParams();
   const prodname = productname_slug?.replace(/-/g, " ");
@@ -47,7 +46,7 @@ export default function Product() {
       let response = await axios.get(
         `https://api.gdswellness.com/api/product/getallProduct`
       );
-
+console.log(response,"response")
       if (response.status === 200) {
         const Productname = response.data.data.find(
           ele => ele.productName?.toLowerCase() === prodname
